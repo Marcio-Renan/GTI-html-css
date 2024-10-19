@@ -1,0 +1,423 @@
+html,
+body {
+    margin: 0;
+    scrollbar-width: thin;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+}
+
+body {
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 1vh;
+}
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+#mainPage {
+    display: flex;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/MainPageBackground.jpeg");
+    background-size: cover;
+    background-position: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+#titleAndSubtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Times New Roman', Times, serif, Times, serif, 'Arial Narrow', Arial, sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    font-weight: 400;
+    font-size: 4vw;
+}
+
+#subTitle {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Times New Roman', Times, serif, Times, serif, 'Arial Narrow', Arial, sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 5vw;
+}
+
+#sections {
+    gap: 1vw;
+    display: flex;
+    flex-direction: row;
+}
+
+#more {
+    padding-bottom: 1vh;
+    color: white;
+    animation: moreAnimation 2s ease-in-out infinite alternate;
+}
+
+#servicesPage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5vh;
+    padding-bottom: 24px;
+    padding-top: 24px;
+}
+
+#textServices {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: xx-large;
+    text-align: center;
+}
+
+#textServicesSubtitle {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0, 0.7);
+}
+
+#services {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3vw;
+}
+
+
+.service {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+}
+
+@media screen and (max-width: 900px) {
+    #services {
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+    }
+
+    .service {
+        width: 95%;
+    }
+}
+
+.serviceIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cadetblue;
+    color: white;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    font-size: 80px;
+}
+
+.serviceTitle {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.serviceDescription {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    color: rgb(0, 0, 0, 0.7);
+}
+
+@keyframes moreAnimation {
+    100% {
+        transform: translateY(-1vh);
+    }
+}
+
+#aboutPage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: whitesmoke;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+}
+
+#aboutTitleText {
+    margin-bottom: 24px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: xx-large;
+    text-align: center;
+}
+
+#aboutSubtitle {
+    color: rgb(0, 0, 0, 0.7);
+    font-weight: 400;
+    font-size: medium;
+}
+
+.aboutSection {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 33% 150px 33%;
+    gap: 2vw;
+    justify-content: center;
+}
+
+.aboutCenterPart{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutImage {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid grey;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.aboutText {
+    text-align: end;
+    flex: 1;
+    padding-bottom: 15vh;
+}
+
+.reverseAboutText {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: start;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    flex: 1;
+    padding-bottom: 15vh;
+}
+
+.aboutYearText {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.aboutTitleText {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.aboutSeparator {
+    flex-grow: 1;
+    width: 3px;
+    background-color: grey;
+}
+
+@media screen and (max-width: 750px) {
+    .aboutSection {
+        grid-template-columns: 33% 20vw 33%;
+    }
+
+    .aboutImage {
+        width: 20vw;
+        height: 20vw;
+        border-radius: 10vw;
+    }
+}
+
+#teamPage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+}
+
+#textTeam {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: xx-large;
+    text-align: center;
+}
+
+#textTeamSubtitle {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0, 0.7);
+    margin-bottom: 5vh;
+}
+
+#team {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3vw;
+    width: 100%;
+}
+
+.lawyer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+}
+
+.lawyerImage {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 3px solid grey;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.lawyerTitle {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.lawyerDescription {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    color: rgb(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 900px) {
+    #team {
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+    }
+
+    .lawyer {
+        width: 95%;
+    }
+}
+
+#socialMedia {
+    font-size: 40px;
+}
+
+#contactPage{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/Agency.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contactPageHeader {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#contactPageTitle {
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+}
+
+#contactPageSubtitle{
+    color: white;
+}
+
+.headerSection {
+    color: rgb(255, 255, 255, 0.7);
+    width: min-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Times, serif;
+    font-weight: 300;
+    font-size: medium;
+}
+
+input{
+    padding: 8px 8px;
+    height: 80px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea{
+    padding: 8px;
+    border-radius: 4px;
+    width: 30%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+#contactForm {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+}
+
+#personalInfo {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 24px;
+}
+
+#contactButton {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: cadetblue;
+    font-weight: bold;
+    border-radius: 4px;
+    color: white;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    height: 10vh;
+}
